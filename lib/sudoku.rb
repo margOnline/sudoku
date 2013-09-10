@@ -17,7 +17,7 @@ class Sudoku
   end
 
   def numbers_one_to_nine_in? row
-    duplicates = row.map {|num| !ALLOWED_NUMS.include?num }
+    duplicates = row.select {|num| !ALLOWED_NUMS.include?num }
     duplicates.uniq.size == 0
   end
 
