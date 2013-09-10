@@ -47,8 +47,11 @@ describe Sudoku do
     expect(sudoku.rotate column).to eq [[1,3],[2,4]]
   end 
 
-  it 'indexes each 3 x 3 sub box' do
-    expect(sudoku.add_box_index_to cell)
+  it 'associates a box index with cell' do
+    cell = [2,4]
+    cell1 = [8,7]
+    expect(sudoku.add_box_index_to cell).to eq 2
+    expect(sudoku.add_box_index_to cell1).to eq 9
   end
 
 
